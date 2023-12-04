@@ -9,7 +9,7 @@ type Human struct {
 	Action
 }
 
-// Структура, явл. частью структуры Human
+// Структура часть структуры Human
 type Action struct {
 	Status string
 }
@@ -21,7 +21,7 @@ func (a *Action) showStatus() {
 func main() {
 	// Создаем структуру Human
 	human := new(Human)
-	// Поле Status явл. полем встроенной структуры Action, поэтому необязательно указывать явно эту структуру
+	// Поле Status поле встроенной структуры Action(необязательно явно указывать структуру)
 	human.Status = "жду"
 	//Тоже относится к методам структуры Action, можем вызывать метод при обьявлении Human
 	human.showStatus()
